@@ -7,7 +7,7 @@ public class AnimateGirl : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
 
-    public float maxSpeed = 2;
+    public float maxSpeed = 0.08F;
 
     private void Start()
     {
@@ -22,22 +22,22 @@ public class AnimateGirl : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            move += Vector3.right * maxSpeed;
+            move = Vector3.right * maxSpeed;
             spriteRenderer.flipX = false;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            move += Vector3.left * maxSpeed;
+            move = Vector3.left * maxSpeed;
             spriteRenderer.flipX = true;
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            move += Vector3.up * maxSpeed;
+            move = Vector3.up * maxSpeed;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            move += Vector3.down * maxSpeed;
+            move = Vector3.down * maxSpeed;
         }
 
         animator.SetFloat("Speed", Mathf.Abs(move.magnitude));
