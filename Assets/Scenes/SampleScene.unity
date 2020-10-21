@@ -243,19 +243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
---- !u!114 &141704992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141704987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4262a395a3d70c80aaa1b823e009af74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,11 +351,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6955934570793669551, guid: 06404ecd63ba1e2ffa4378243b8b94a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6955934570793669551, guid: 06404ecd63ba1e2ffa4378243b8b94a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6955934570793669551, guid: 06404ecd63ba1e2ffa4378243b8b94a6, type: 3}
       propertyPath: m_LocalPosition.z

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator), typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator), typeof(SpriteRenderer), typeof(Rigidbody2D))]
 public class AnimateGirl : MonoBehaviour
 {
 
-    Animator animator;
-    SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rigidbody2D;
 
     public int maxSpeed = 5;
 
@@ -16,35 +17,36 @@ public class AnimateGirl : MonoBehaviour
     private static readonly int Jump = Animator.StringToHash("Jump");
     private static readonly int upRun = Animator.StringToHash("upRun");
 
-    private void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        var distanePerFrame = maxSpeed * Time.deltaTime;
+        var maxDistancePerFrame = maxSpeed;
         Vector3 move = Vector3.zero;
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            move += Vector3.right * distanePerFrame;
+            move += Vector3.right * maxDistancePerFrame;
             spriteRenderer.flipX = false;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            move += Vector3.left * distanePerFrame;
+            move += Vector3.left * maxDistancePerFrame;
             spriteRenderer.flipX = true;
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            move += Vector3.up * distanePerFrame;
+            move += Vector3.up * maxDistancePerFrame;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            move += Vector3.down * distanePerFrame;
+            move += Vector3.down * maxDistancePerFrame;
         }
 
         if (animator.GetBool(Roll)) animator.ResetTrigger(Roll);
@@ -62,6 +64,7 @@ public class AnimateGirl : MonoBehaviour
         animator.SetBool(upRun, Input.GetKey(KeyCode.UpArrow));
 
         animator.SetFloat(Speed, move.magnitude * 10f);
-        this.transform.position = this.transform.position + move;
+        rigidbody2D.velocity = move;
     }
 }
+
