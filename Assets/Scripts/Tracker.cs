@@ -8,7 +8,7 @@ public class Tracker : MonoBehaviour
     public GameObject Target;
 
     public Vector2 DeadWindow;
-    public float FollowSpeed = 0.02f;
+    public int FollowSpeed = 1;
     private Rect _rect;
 
     private void OnDrawGizmos()
