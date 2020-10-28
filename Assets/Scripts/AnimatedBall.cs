@@ -11,6 +11,7 @@ public class AnimatedBall : MonoBehaviour
     // private Vector3 _orientation = Vector3.right;
     // private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private SpriteRenderer otherSpriteRenderer;
     private Color baseColor;
 
     void Start()
@@ -35,9 +36,8 @@ public class AnimatedBall : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-            spriteRenderer.color = new Color(0.0f, 0.0f, 0.0f, 1f);
+            otherSpriteRenderer = coll.gameObject.GetComponent<SpriteRenderer>();
+            spriteRenderer.color = otherSpriteRenderer.color;
         }
-
-        spriteRenderer.color = baseColor;
     }
 }
