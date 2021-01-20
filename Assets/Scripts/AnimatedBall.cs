@@ -22,4 +22,5 @@ public class AnimatedBall : MonoBehaviour
             spriteRenderer.color = otherSpriteRenderer.color;
         }
     }
+
 }
