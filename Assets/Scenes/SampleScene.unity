@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 16972628}
   - component: {fileID: 16972627}
   - component: {fileID: 16972631}
-  - component: {fileID: 16972630}
   - component: {fileID: 16972632}
+  - component: {fileID: 16972630}
   m_Layer: 0
   m_Name: girl-2_0
   m_TagString: Player
@@ -289,7 +289,6 @@ GameObject:
   - component: {fileID: 398422164}
   - component: {fileID: 398422163}
   - component: {fileID: 398422165}
-  - component: {fileID: 398422166}
   m_Layer: 0
   m_Name: Right Goal
   m_TagString: Untagged
@@ -388,28 +387,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &398422166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398422162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691c1de68eb83a57c8cd0b415e86a9e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 0}
-  left: {fileID: 0}
-  right: {fileID: 0}
-  orange_girl: {fileID: 0}
-  blue_girl: {fileID: 0}
-  ballPrefab: {fileID: 0}
-  orignal_pos_orange_girl: {x: 0, y: 0, z: 0}
-  orignal_pos_blue_girl: {x: 0, y: 0, z: 0}
-  orignal_pos_ballPrefab: {x: 0, y: 0, z: 0}
-  bodyType: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08b846fd20e11f03ada2a00df584ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 16972626}
+  Target: {fileID: 531925270}
   DeadWindow: {x: 0, y: 0}
   FollowSpeed: 1
 --- !u!20 &519420031
@@ -597,8 +574,9 @@ GameObject:
   - component: {fileID: 609625317}
   - component: {fileID: 609625319}
   - component: {fileID: 609625318}
+  - component: {fileID: 609625320}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.8, y: 53.4}
+  m_AnchoredPosition: {x: -35, y: 50}
   m_SizeDelta: {x: 34.412506, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609625318
@@ -665,6 +643,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609625316}
   m_CullTransparentMesh: 0
+--- !u!114 &609625320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609625316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16728e468a50bcf1d8d94821ce0835fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFollow: {fileID: 609625317}
 --- !u!1 &618500620
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +748,6 @@ GameObject:
   m_Component:
   - component: {fileID: 900872270}
   - component: {fileID: 900872269}
-  - component: {fileID: 900872268}
   - component: {fileID: 900872271}
   m_Layer: 0
   m_Name: Left Goal
@@ -766,28 +756,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &900872268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900872267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691c1de68eb83a57c8cd0b415e86a9e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 0}
-  left: {fileID: 0}
-  right: {fileID: 0}
-  orange_girl: {fileID: 0}
-  blue_girl: {fileID: 0}
-  ballPrefab: {fileID: 0}
-  orignal_pos_orange_girl: {x: 0, y: 0, z: 0}
-  orignal_pos_blue_girl: {x: 0, y: 0, z: 0}
-  orignal_pos_ballPrefab: {x: 0, y: 0, z: 0}
-  bodyType: 0
 --- !u!212 &900872269
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -911,7 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -933,7 +901,7 @@ MonoBehaviour:
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
+  m_PhysicalUnit: 0
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
@@ -990,6 +958,7 @@ GameObject:
   - component: {fileID: 1352125654}
   - component: {fileID: 1352125656}
   - component: {fileID: 1352125655}
+  - component: {fileID: 1352125657}
   m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
@@ -1013,7 +982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47.5, y: 51.2}
+  m_AnchoredPosition: {x: 50, y: 50}
   m_SizeDelta: {x: 28.259033, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1352125655
@@ -1058,6 +1027,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352125653}
   m_CullTransparentMesh: 0
+--- !u!114 &1352125657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352125653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16728e468a50bcf1d8d94821ce0835fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFollow: {fileID: 1352125654}
 --- !u!1 &1586844394
 GameObject:
   m_ObjectHideFlags: 0
